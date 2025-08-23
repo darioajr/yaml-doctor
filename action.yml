@@ -1,0 +1,13 @@
+name: 'YAML Doctor Action'
+description: 'Validate YAML files using @darioajr/yaml-doctor.'
+inputs:
+  path:
+    description: 'Path to the YAML file or directory.'
+    required: true
+    default: '.'
+runs:
+  using: 'node20'
+  main: '.github/actions/yaml-doctor/index.js'
+branding:
+  icon: 'check-circle'
+  color: 'blue'

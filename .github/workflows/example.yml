@@ -1,0 +1,15 @@
+name: YAML validation with yaml-doctor
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  yaml-doctor:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: YAML validation
+        uses: darioajr/yaml-doctor@v1
+        with:
+          path: './yourfile.yaml' # Change to the path of your YAML file or folder
