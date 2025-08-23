@@ -7,7 +7,7 @@ inputs:
     default: '.'
 runs:
   using: 'node20'
-  main: '.github/actions/yaml-doctor/index.js'
+  main: './index.js'
 branding:
   icon: 'check-circle'
   color: 'blue'
