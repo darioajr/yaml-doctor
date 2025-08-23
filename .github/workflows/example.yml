@@ -1,7 +1,8 @@
 name: YAML validation with yaml-doctor
 on:
   push:
-    branches: [ main ]
+    tags:
+      - 'v*'
 
 jobs:
   yaml-doctor:
@@ -9,6 +10,7 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
+
       - name: YAML validation
         uses: darioajr/yaml-doctor@v1
         with:
